@@ -13,7 +13,7 @@ class Universe {
   }
 
   setSize(size) {
-    return this.size = size;
+    this.size = size;
   }
 }
 
