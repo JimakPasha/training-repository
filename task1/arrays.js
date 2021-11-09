@@ -1,13 +1,17 @@
-//???// 1. Создайте массив из 10 чисел. Найдите количество
+// 1. Создайте массив из 10 чисел. Найдите количество
 // элементов массива, которые отличны от
 // наибольшего не более чем на 10%.
 
 const randomNumbersArr1 = [4, 50, 3, 85, -90, 33, 346, -193, 35, 33];
-const randomNumbersArr2 = [-8, 94, 1, 8, 1, 46, 1, 318, -1000, -102];
+const randomNumbersArr2 = [-8, 115, 112, 1, 8, 1, 46, 1, 118, -1000, -102];
 
-const findAmountNumbersDiffer = () => {
-
+const findAmountNumbersDiffer = (arr) => {
+  const maxNum = arr.sort((a, b) => a - b)[arr.length - 1];
+  return arr.filter(n => n >= (maxNum / 100) * 90 && n !== maxNum).length;
 }
+
+console.log(findAmountNumbersDiffer(randomNumbersArr1));
+console.log(findAmountNumbersDiffer(randomNumbersArr2));
 
 // 2. Создайте массив из 10 чисел. Найдите и выведите на
 // экран наименьший четный элемент массива.
