@@ -8,7 +8,7 @@ const arr = [
 
 const validationArr = (arr) => {
   let checkValid = 'its valid';
-  arr.map((item) => item.a <= item.b ? ok = 'its invalid' : null);
+  arr.map(item => item.a <= item.b ? checkValid = 'its invalid' : null);
   console.log(checkValid);
 }
 
@@ -23,7 +23,6 @@ const squaringItemB = (arr) => {
 }
 
 console.log(squaringItemB(arr));
-
 
 // 3. С помощью метода/методов взять все поля a и b и последовательно поместить их в массив
 // пример получившегося массива: [2,1,5,12,95,7]
