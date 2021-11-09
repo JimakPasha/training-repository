@@ -8,7 +8,7 @@ const arr = [
 
 const validationArr = (arr) => {
   let checkValid = 'its valid';
-  arr.map(item => item.a <= item.b ? checkValid = 'its invalid' : null);
+  arr.map(({a, b}) => a <= b ? checkValid = 'its invalid' : null);
   console.log(checkValid);
 }
 
@@ -28,10 +28,6 @@ console.log(squaringItemB(arr));
 // пример получившегося массива: [2,1,5,12,95,7]
 // можно делать копию
 
-const expandArrObjects = (arr) => {
-  let newArr = [];
-  arr.map(item => newArr.push(item.a, item.b));
-  return newArr;
-}
+const expandArrObjects = (arr) => arr.reduce((acc, {a, b}) => {acc.push(a, b); return acc}, []);
 
 console.log(expandArrObjects(arr));
