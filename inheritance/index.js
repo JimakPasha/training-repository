@@ -10,8 +10,8 @@ class Human {
 }
 
 class Programmer extends Human {
-  constructor({ name, age, technologies }) {
-    super({ name, age });
+  constructor({ technologies, ...otherProps }) {
+    super(otherProps);
     this.technologies = technologies;
   }
 
@@ -21,15 +21,15 @@ class Programmer extends Human {
 }
 
 class Sportsman extends Human {
-  constructor({ name, age, medals }) {
-    super({ name, age });
+  constructor({ medals, ...otherProps }) {
+    super(otherProps);
     this.medals = medals;
   }
 }
 
 class FootballPlayer extends Sportsman {
-  constructor({ name, age, medals, team }) {
-    super({ name, age, medals });
+  constructor({ team, ...otherProps }) {
+    super(otherProps);
     this.team = team;
   }
 
@@ -39,8 +39,8 @@ class FootballPlayer extends Sportsman {
 }
 
 class HockeyPlayer extends Sportsman {
-  constructor({ name, age, medals, weight }) {
-    super({ name, age, medals });
+  constructor({ weight, ...otherProps }) {
+    super(otherProps);
     this.weight = weight;
   }
 
