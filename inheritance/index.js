@@ -1,7 +1,7 @@
 class Human {
-  constructor(options) {
-    this.name = options.name;
-    this.age = options.age;
+  constructor({ name, age }) {
+    this.name = name;
+    this.age = age;
   }
 
   sayHi() {
@@ -10,9 +10,9 @@ class Human {
 }
 
 class Programmer extends Human {
-  constructor(options) {
-    super(options);
-    this.technologies = options.technologies;
+  constructor({ name, age, technologies }) {
+    super({ name, age });
+    this.technologies = technologies;
   }
 
   startCoding() {
@@ -21,16 +21,16 @@ class Programmer extends Human {
 }
 
 class Sportsman extends Human {
-  constructor(options) {
-    super(options);
-    this.medals = options.medals;
+  constructor({ name, age, medals }) {
+    super({ name, age });
+    this.medals = medals;
   }
 }
 
 class FootballPlayer extends Sportsman {
-  constructor(options) {
-    super(options);
-    this.team = options.team;
+  constructor({ name, age, medals, team }) {
+    super({ name, age, medals });
+    this.team = team;
   }
 
   run(speed) {
@@ -39,9 +39,9 @@ class FootballPlayer extends Sportsman {
 }
 
 class HockeyPlayer extends Sportsman {
-  constructor(options) {
-    super(options);
-    this.weight = options.weight;
+  constructor({ name, age, medals, weight }) {
+    super({ name, age, medals });
+    this.weight = weight;
   }
 
   pushOpponent(opponentName) {
