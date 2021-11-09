@@ -6,13 +6,9 @@ const arr = [
   {a: 95, b: 7}
 ]
 
-const validationArr = (arr) => {
-  let checkValid = 'its valid';
-  arr.map(({a, b}) => a <= b ? checkValid = 'its invalid' : null);
-  console.log(checkValid);
-}
+const validationArr = (arr) => arr.every(({a, b}) => a > b) ? 'its valid' : 'its invalid';
 
-validationArr(arr);
+console.log(validationArr(arr));
 
 // 2. На основе массива arr, создать массив объектов у которых поле b возведено в квадрат
 
