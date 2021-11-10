@@ -2,6 +2,12 @@
 
 const getResolvedPromise = (value) => new Promise((resolve, reject) => {
     resolve(value);
-}).then()
+}).then(data => {
+    if (data > 300) {
+        reject('Ошибка');
+    }
+}).catch(error => console.log(error))
+.finally(() => console.log('This is Finally!'))
 
-console.log(getResolvedPromise(500));
+getResolvedPromise(500);
+
