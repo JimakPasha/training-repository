@@ -66,9 +66,9 @@ window.addEventListener('load', () => {
     e.preventDefault();
     history.pushState(null, null, '/year');
     root.innerHTML = `
-      <section class="number">
+      <section class="year">
         <div class="enter">
-          <h3 class="enter__title">Enter number</h3>
+          <h3 class="enter__title">Enter year</h3>
           <input class="enter__input" type="text" />
           <button class="enter__btn">Ok</button>
         </div>
@@ -81,4 +81,54 @@ window.addEventListener('load', () => {
       console.log(input.value);
     });
   });
+
+  if (window.location.pathname === '/date') {
+    root.innerHTML = `
+    <section class="date">
+      <div class="enter">
+        <h3 class="enter__title">Enter date</h3>
+        <input class="enter__input" type="text" />
+        <button class="enter__btn">Ok</button>
+      </div>
+    </section>
+  `;
+  }
+
+  if (window.location.pathname === '/number') {
+    root.innerHTML = `
+      <section class="number">
+        <div class="enter">
+          <h3 class="enter__title">Enter number</h3>
+          <input class="enter__input" type="text" />
+          <button class="enter__btn">Ok</button>
+        </div>
+      </section>
+    `;
+  }
+
+  if (window.location.pathname === '/year') {
+    root.innerHTML = `
+    <section class="year">
+      <div class="enter">
+        <h3 class="enter__title">Enter year</h3>
+        <input class="enter__input" type="text" />
+        <button class="enter__btn">Ok</button>
+      </div>
+    </section>
+  `;
+  }
+
+  if (window.location.pathname === '') {
+    root.innerHTML = `
+    <section section class="home">
+      <h2 class="home__title">Please choose what information you want to receive</h2>
+      <div class="home__btns-wrapper">
+        <a class="home__btn" id="date" href="/">Date</a>
+        <a class="home__btn" id="number" href="/">Number</a>
+        <a class="home__btn" id="year" href="/">Year</a>
+      </div>
+    </section>
+  `;
+  }
+
 });

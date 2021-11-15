@@ -56,6 +56,8 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
+    static: './',
     port: 8080,
     hot: isDev,
   },
