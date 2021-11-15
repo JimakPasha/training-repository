@@ -1,1 +1,115 @@
-@import "~normalize.css";
+/* reset */
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	font-weight: 400;
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* global */
+
+.body {
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  padding: 80px 30px 30px;
+  flex-grow: 1;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(158,158,158,1) 100%, rgba(172,176,177,1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  height: 80px;
+  padding: 20px 0;
+  background: #ececec;
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000;
+    text-transform: uppercase;
+  }
+}
+
+.footer {
+  height: 80px;
+  padding: 30px 0;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 100%, rgba(158,158,158,1) 100%, rgba(172,176,177,1) 100%);
+
+  &__link {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
