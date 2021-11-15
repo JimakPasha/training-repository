@@ -2,10 +2,27 @@ import './styles.scss';
 
 async function getDataUsers(number, type) {
   const response = await fetch(`http://numbersapi.com/${number}/${type}`);
-  console.log(response);
-  const json = await response.json();
-  console.log(json);
-  // return json.data;
+  const data = await response.text();
+  return data;
+}
+
+function renderDataRequest(number, type) {
+  const blockInformation = document.querySelector('.information-number');
+  blockInformation.innerHTML = ``;
+  getDataUsers(number, type)
+    .then((data) => {
+      blockInformation.innerHTML = `
+        <p>${data}</p>
+      `;
+    })
+    .catch(() => {
+      page.innerHTML += `
+      <div class="error">
+        <p class="error__message">Error, can't get data from server</p>
+      </div>
+      `;
+      main.style = 'background-image: url(assets/404.jpg);';
+    });
 }
 
 window.addEventListener('load', () => {
@@ -18,6 +35,7 @@ window.addEventListener('load', () => {
         <a class="home__btn" id="number" href="/">Number</a>
         <a class="home__btn" id="year" href="/">Year</a>
       </div>
+      <div class="information-number"></div>
     </section>
   `;
 
@@ -31,6 +49,7 @@ window.addEventListener('load', () => {
         <input class="enter__input" type="text" />
         <button class="enter__btn">Ok</button>
       </div>
+      <div class="information-number"></div>
     </section>
   `;
     const btnRequest = document.querySelector('.enter__btn');
@@ -38,7 +57,7 @@ window.addEventListener('load', () => {
 
     btnRequest.addEventListener('click', () => {
       const inputRes = input.value;
-      getDataUsers(inputRes, 'date');
+      renderDataRequest(inputRes, 'date');
     });
   });
 
@@ -52,13 +71,15 @@ window.addEventListener('load', () => {
           <input class="enter__input" type="text" />
           <button class="enter__btn">Ok</button>
         </div>
+        <div class="information-number"></div>
       </section>
     `;
     const btnRequest = document.querySelector('.enter__btn');
     const input = document.querySelector('.enter__input');
 
     btnRequest.addEventListener('click', () => {
-      console.log(input.value);
+      const inputRes = input.value;
+      renderDataRequest(inputRes, 'math');
     });
   });
 
@@ -72,13 +93,15 @@ window.addEventListener('load', () => {
           <input class="enter__input" type="text" />
           <button class="enter__btn">Ok</button>
         </div>
+        <div class="information-number"></div>
       </section>
     `;
     const btnRequest = document.querySelector('.enter__btn');
     const input = document.querySelector('.enter__input');
 
     btnRequest.addEventListener('click', () => {
-      console.log(input.value);
+      const inputRes = input.value;
+      renderDataRequest(inputRes, 'year');
     });
   });
 
@@ -90,6 +113,7 @@ window.addEventListener('load', () => {
         <input class="enter__input" type="text" />
         <button class="enter__btn">Ok</button>
       </div>
+      <div class="information-number"></div>
     </section>
   `;
   }
@@ -102,6 +126,7 @@ window.addEventListener('load', () => {
           <input class="enter__input" type="text" />
           <button class="enter__btn">Ok</button>
         </div>
+        <div class="information-number"></div>
       </section>
     `;
   }
@@ -114,6 +139,7 @@ window.addEventListener('load', () => {
         <input class="enter__input" type="text" />
         <button class="enter__btn">Ok</button>
       </div>
+      <div class="information-number"></div>
     </section>
   `;
   }
@@ -127,8 +153,8 @@ window.addEventListener('load', () => {
         <a class="home__btn" id="number" href="/">Number</a>
         <a class="home__btn" id="year" href="/">Year</a>
       </div>
+      <div class="information-number"></div>
     </section>
   `;
   }
-
 });
