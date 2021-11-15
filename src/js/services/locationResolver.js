@@ -7,10 +7,6 @@ import clickChangePage from './clickChangePage';
 
 const locationResolver = (location, renderBox) => {
   switch (location) {
-    case '/':
-      renderBox.innerHTML = homeRender();
-      clickChangePage();
-      break;
     case '/date':
       renderBox.innerHTML = dateRender();
       request();

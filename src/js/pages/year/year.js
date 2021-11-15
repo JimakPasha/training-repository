@@ -5,7 +5,7 @@ const yearRender = () => {
   history.pushState(null, null, '/year');
   return `
     <section class="year">
-      ${enterBlock()}
+      ${enterBlock('year')}
     </section>
   `;
 };

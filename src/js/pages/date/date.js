@@ -5,7 +5,7 @@ const dateRender = () => {
   history.pushState(null, null, '/date');
   return `
     <section class="date">
-    ${enterBlock()}
+    ${enterBlock('date')}
     </section>
   `;
 };
