@@ -31,6 +31,7 @@ module.exports = {
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   optimization: optimization(),
   plugins: [
@@ -55,6 +56,8 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
+    static: './',
     port: 8080,
     hot: isDev,
   },
