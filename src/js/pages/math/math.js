@@ -5,7 +5,7 @@ const numberRender = () => {
   history.pushState(null, null, '/math');
   return `
     <section class="math">
-      ${enterBlock()}
+      ${enterBlock('number')}
     </section>
   `;
 };
