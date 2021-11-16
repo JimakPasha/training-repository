@@ -28,8 +28,10 @@
       transform: scale(0.9);
     }
   }
+}
 
-  &__error-message {
-    color: red;
-  }
+.f {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
