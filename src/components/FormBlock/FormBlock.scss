@@ -1,4 +1,4 @@
-.enter {
+.form {
   &__title {
     margin-bottom: 50px;
   }
@@ -27,5 +27,9 @@
     &:active {
       transform: scale(0.9);
     }
+  }
+
+  &__error-message {
+    color: red;
   }
 }
