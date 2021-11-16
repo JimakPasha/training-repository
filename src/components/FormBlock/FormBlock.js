@@ -19,6 +19,7 @@ const FormBlock = (typeNumber) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDataNumber('');
     if (number === '' || !/^[0-9]+$/.test(number)) {
       setError(true);
     } else {
