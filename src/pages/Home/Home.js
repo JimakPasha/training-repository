@@ -9,13 +9,13 @@ const Home = () => {
         Please choose what information you want to receive
       </h2>
       <div className="home__btns-wrapper">
-        <NavLink className="home__btn" id="date" exact to="/date">
+        <NavLink className="home__btn" exact to="/date">
           Date
         </NavLink>
-        <NavLink className="home__btn" id="math" exact to="/math">
+        <NavLink className="home__btn" exact to="/math">
           Number
         </NavLink>
-        <NavLink className="home__btn" id="year" exact to="/year">
+        <NavLink className="home__btn" exact to="/year">
           Year
         </NavLink>
       </div>
