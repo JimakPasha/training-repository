@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Home.scss';
 
 const Home = () => {
@@ -8,17 +9,16 @@ const Home = () => {
         Please choose what information you want to receive
       </h2>
       <div className="home__btns-wrapper">
-        <a className="home__btn" id="date" href="/">
+        <NavLink className="home__btn" id="date" exact to="/date">
           Date
-        </a>
-        <a className="home__btn" id="math" href="/">
+        </NavLink>
+        <NavLink className="home__btn" id="math" exact to="/math">
           Number
-        </a>
-        <a className="home__btn" id="year" href="/">
+        </NavLink>
+        <NavLink className="home__btn" id="year" exact to="/year">
           Year
-        </a>
+        </NavLink>
       </div>
-      <div className="information-number">test</div>
     </section>
   );
 };
