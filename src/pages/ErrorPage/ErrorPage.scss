@@ -1,12 +1,12 @@
 .errorPage {
-  color: red;
-
   &__title {
     font-size: 32px;
     margin-bottom: 30px;
+    color: red;
   }
 
   &__text {
     font-size: 24px;
+    color: red;
   }
 }
