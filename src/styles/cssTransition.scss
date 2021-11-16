@@ -1,0 +1,21 @@
+.cssTransition-enter {
+  opacity: 0;
+  transform: translateX(-1000px);
+}
+
+.cssTransition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.cssTransition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cssTransition-exit-active {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: opacity 300ms, transform 300ms;
+}
