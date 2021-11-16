@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import getDataUsers from '../../services/api';
 import DataNumber from '../DataNumber/DataNumber';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import ButtonToHome from './ButtonToHome/ButtonToHome';
+import ButtonToHome from '../ButtonToHome/ButtonToHome';
 import './FormBlock.scss';
 
 const FormBlock = (typeNumber) => {

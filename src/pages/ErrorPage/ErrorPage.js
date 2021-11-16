@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonToHome from '../../components/FormBlock/ButtonToHome/ButtonToHome';
+import ButtonToHome from '../../components/ButtonToHome/ButtonToHome';
 import './ErrorPage.scss';
 
 const Date = () => {
