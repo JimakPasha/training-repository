@@ -1,8 +1,8 @@
 import React from 'react';
-import EnterBlock from '../../components/EnterBlock/EnterBlock';
+import FormBlock from '../../components/FormBlock/FormBlock';
 
 const Date = () => {
-  return <section className="date">{EnterBlock('date')}</section>;
+  return <section className="date">{FormBlock('date')}</section>;
 };
 
 export default Date;

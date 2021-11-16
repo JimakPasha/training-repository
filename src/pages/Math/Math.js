@@ -1,8 +1,8 @@
 import React from 'react';
-import EnterBlock from '../../components/EnterBlock/EnterBlock';
+import FormBlock from '../../components/FormBlock/FormBlock';
 
 const Math = () => {
-  return <section className="math">{EnterBlock('math')}</section>;
+  return <section className="math">{FormBlock('math')}</section>;
 };
 
 export default Math;
