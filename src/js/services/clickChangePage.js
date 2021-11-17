@@ -24,8 +24,8 @@ const locationCheck = (location, renderBox) => {
 
 const clickChangePage = () => {
   document.querySelector('.home__btns-wrapper').addEventListener('click', (e) => {
-    const pageName = e.target.id;
     e.preventDefault();
+    const pageName = e.target.id;
     locationCheck(`/${pageName}`, document.querySelector('#root'));
   });
 };
